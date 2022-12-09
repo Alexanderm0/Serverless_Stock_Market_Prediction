@@ -1,8 +1,8 @@
-# Serverless Spam Classifier
-This project features a serverless machine learning pipeline for classifying emails as either spam or not spam. 
+# Serverless Stock Market Predictions
+This project features a serverless machine learning pipeline for predicting the stock market price action based on past events.
 
 ### Data source
-The dataset used for this implementation is 'Spambase', taken from the UCI machine learning repository which can be found at: http://archive.ics.uci.edu/ml/datasets/Spambase/
+The real life data source will be taken from Yahoo Finance using the yfinance package: https://pypi.org/project/yfinance/
 
 ### Application
-The trained model will be featured in a Huggingface application in which users can input text and test it on being classified as spam. As a use-case, one could use the model to test whether their email will be classified as spam before sending it out.
+In the interface a user will be able to fill in the ticker symbol for a given stock. Based on this, the app will use the yfinance package to retrieve up-to-date historical data and perform inference on this input. Advice will be displayed to the user based on the intent, i.e. a short or long term investment.
