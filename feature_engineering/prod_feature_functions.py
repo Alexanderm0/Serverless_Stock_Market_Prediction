@@ -1,6 +1,7 @@
 import yfinance as yf
 import pandas as pd
 from random import randint
+from sklearn.preprocessing import MinMaxScaler
 
 def getEarnings(stock):
     """
@@ -96,12 +97,22 @@ def processStock(symbol, period='1mo', interval='15m', seq=240):
     :param interval: how often a sample is taken over the period
     :return:
     """
+    success = False
     stock = yf.Ticker(symbol)
-    earnings = getEarnings(stock)
+    # earnings = getEarnings(stock)
+    while not success:
+        try:
+            earnings = getEarnings(stock)
+            success = True
+        except:
+            print('yfinance error retrieving data')
     hist = getHistory(symbol, stock, period=period, interval=interval)
     rel_earnings = getRelEarnings(earnings, hist)
     hist = getHistWithEarnings(rel_earnings, hist)
     hist = dropIrrelevant(hist)
     hist.reset_index(drop=True, inplace=True)
-    return hist[:seq]
+    hist = hist[:seq]
+    scaler = MinMaxScaler(feature_range=(0, 1))
+    scaled_data = scaler.fit_transform(hist)
+    return scaled_data
 

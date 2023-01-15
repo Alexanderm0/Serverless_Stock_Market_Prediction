@@ -20,6 +20,21 @@ For this application, it has been opted for a Long-Short-Term-Memory
 achieve great performance on this exact task according to Moghar &
 Hamiche (https://www.sciencedirect.com/science/article/pii/S1877050920304865).
 
+Based on this project's trained model, the following visual results were obtained
+based on AAPL stock:
+
+<p float="left">
+  <img src="./imgs/AAPL_1.jpg" width="40%" />
+  <img src="./imgs/AAPL_2.jpg" width="40%" />
+</p>
+
+<p float="left">
+  <img src="./imgs/AAPL_3.jpg" width="40%" />
+  <img src="./imgs/AAPL_4.jpg" width="40%" />
+</p>
+
+
+
 ### Application
 In the interface a user will be able to select the ticker symbol 
 for a given stock in the list. Based on this, the app will use the 

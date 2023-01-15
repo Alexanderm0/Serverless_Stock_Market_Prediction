@@ -6,3 +6,6 @@ dataframe-image
 modal-client
 gradio
 yfinance
+matplotlib
+google
+tensorflow
