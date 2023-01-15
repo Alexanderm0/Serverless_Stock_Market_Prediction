@@ -21,7 +21,7 @@ achieve great performance on this exact task according to Moghar &
 Hamiche (https://www.sciencedirect.com/science/article/pii/S1877050920304865).
 
 Based on this project's trained model, the following visual results were obtained
-based on AAPL stock:
+based on AAPL stock, where MSE was determined at $8.23:
 
 <p float="left">
   <img src="./imgs/AAPL_1.jpg" width="40%" />
